@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Total Square Footage by Congressional District",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Suryav38/suryav38.github.io/main/building_inventory%20(1).csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [{"filter": "datum['Congress Dist'] !== '0'"}],
+  "mark": "square",
+  "encoding": {
+    "x": {
+      "field": "Congress Dist",
+      "type": "nominal",
+      "axis": {"title": "Congressional District"}
+    },
+    "y": {
+      "field": "Square Footage",
+      "aggregate": "sum",
+      "type": "quantitative",
+      "axis": {"title": "Total Square Footage"}
+    },
+    "color": {
+      "field": "Congress Dist",
+      "type": "nominal",
+      "legend": {"title": "Congressional District"}
+    },
+    "tooltip": [
+      {"field": "Congress Dist", "type": "nominal"},
+      {"field": "Square Footage", "aggregate": "sum", "type": "quantitative"}
+    ]
+  },
+  "config": {"axis": {"labelAngle": -15}}
+}
