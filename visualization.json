@@ -1,0 +1,11 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "URL_TO_YOUR_DATA.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "building_type", "type": "nominal"},
+    "y": {"field": "count", "type": "quantitative"}
+  }
+}
