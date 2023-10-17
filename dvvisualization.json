@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Total Square Footage by Congressional District",
   "data": {
-    "url": "https://raw.githubusercontent.com/Suryav38/suryav38.github.io/main/building_inventory%20(1).csv",
+    "url": "https://raw.githubusercontent.com/vishald2725/dvisualization/main/building_inventory.csv",
     "format": {"type": "csv"}
   },
   "transform": [{"filter": "datum['Congress Dist'] !== '0'"}],
